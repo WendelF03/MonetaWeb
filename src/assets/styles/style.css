@@ -51,3 +51,6 @@
     color: aliceblue;
     font-weight: bold;
 }
+section{
+    display: flex;
+}
