@@ -72,3 +72,19 @@
   div.data {
     font-size: 13px;
   }
+
+  form.simulações{
+      position: fixed;
+      top: 200px;
+      left: 290px;
+      height: 600px;
+      width: 1600px;
+      background-color: gainsboro ;
+      border-radius: 10px;
+  }
+
+  h3{
+    position: fixed;
+    top: 100px;
+    left: 900px;
+  }
