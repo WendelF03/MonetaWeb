@@ -152,6 +152,32 @@
     text-align: center;
   }
 
+  label.titulo5{
+    box-sizing: border-box;
+    position: absolute;
+    width: 231.33px;
+    height: 32.05px;
+    left: 420px;
+    top: 467px;
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    border-radius: 50px;
+    text-align: center;
+  }
+
+  p#resultado{
+    box-sizing: border-box;
+    position: absolute;
+    width: 400px;
+    height: 56.9px;
+    left: 330px;
+    top: 510px;
+    background: #fff;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    text-align: center;
+  }
+
   input.button{
     box-sizing: border-box;
     position: absolute;
@@ -174,7 +200,7 @@
     border-radius: 20px;
   }
 
-  input#vPrestacao{
+  input#taxa{
     box-sizing: border-box;
     position: absolute;
     width: 781.41px;
