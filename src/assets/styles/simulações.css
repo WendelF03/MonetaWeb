@@ -83,7 +83,7 @@
       border-radius: 10px;
   }
 
-  h3{
+  section.menu-lateral h3{
     position: fixed;
     top: 80px;
     left: 750px;
@@ -232,4 +232,10 @@
   input#cancelar{
     left: 150px;
     top: 530px;
+  }
+
+  h4{
+    position: fixed;
+    left: 600px;
+    top: 100px;
   }
