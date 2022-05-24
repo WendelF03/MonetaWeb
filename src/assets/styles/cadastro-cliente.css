@@ -1,7 +1,7 @@
 .main {
     background-color: #dbdbdb;
     margin-top: 10px ;
-    padding: 10px 30px 20px;
+    padding: 20px;
 }
 
 .cadastrocliente {
@@ -14,7 +14,7 @@
 
 .i-am-centered { 
     margin: auto; 
-    max-width: 600px;
+    max-width: 1200px;
 }
 
 .control-label {
@@ -22,14 +22,11 @@
     font-size: 1.1em;
 }
 
-.control-label-popout {
-    font-weight: bold;
-    font-size: 1.05em;
-}
+
 
 input[type=text],
-input[type=number], 
-input[type=email] {
+input[type=tel], 
+input[type=mail] {
     width: 100%;
     box-sizing: border-box;
     border: 3px solid #101010;
@@ -45,14 +42,6 @@ input::-webkit-inner-spin-button {
 }
 
 
-.form-contato input {
-    width: 100%;
-    box-sizing: border-box;
-    border: 2px solid #101010;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-}
 
 .custom-select select {
     border: 3px solid #101010; 
@@ -64,47 +53,12 @@ input::-webkit-inner-spin-button {
     
 }
 
-.contato div[class^="col-"] {
-    padding: 15px 30px; /* calcula a distancia entro um inpute e outro e os cantos da tela*/
-    
-}
-
-.btn-popout {
-    margin: auto;
-    padding:0;
-}
-
-.contato {
-    background-color: #fafafa;
-    padding: 10px;
-    margin: auto;
-    width: 100%;
-}
-
-.btn-toolbar-popout .btn {
-    max-width: 150px;
-    background-color: #fafafa;
-    border: 3px solid #101010;
-    border-radius: 15px 15px 0 0;
-    border-bottom: none;
-    padding: auto;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    font-weight: bold;
-    font-size: 1.05em
-}
 
 
 .btn-toolbar .btn{
+    margin: auto;
     margin-top: 15px;
-    margin-right: auto;
-    margin-left: 250px;
     padding:10px 30px;
     border: 3px solid #101010;
     font-weight: bold;
-}
-.btn-toolbar .btn:last-child {
-    margin-right: 250px;
-    margin-left: auto;
-
 }
