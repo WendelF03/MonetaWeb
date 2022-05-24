@@ -73,26 +73,31 @@
     font-size: 13px;
   }
 
-  form.simulações{
-      position: fixed;
-      top: 150px;
-      left: 290px;
-      height: 600px;
-      width: 1110px;
-      background-color: gainsboro ;
-      border-radius: 10px;
-  }
-
   section.menu-lateral h3{
     position: fixed;
     top: 80px;
     left: 750px;
   }
 
+  form.simulações{
+      position: absolute;
+      top: 150px;
+      left: 290px;
+      height: 65%;
+      width: 80%;
+      background-color: gainsboro ;
+      border-radius: 10px;
+  }
+
+  form div.formu{
+    position: relative;
+    margin-left: 13%;
+  }
+
   div.user{
-    position: fixed;
+    position: absolute;
     top: 80px;
-    left: 1310px;
+    left: 90%;
   }
 
   div.user1{
@@ -103,7 +108,7 @@
     position: absolute;
     width: 394px;
     height: 36px;
-    left: 405px;
+    left: 28%;
     top: 30px;
     font-family: 'Inter';
     font-style: normal;
@@ -235,7 +240,7 @@
   }
 
   h4{
-    position: fixed;
-    left: 730px;
+    position: absolute;
+    left: 45.2%;
     top: 100px;
   }
