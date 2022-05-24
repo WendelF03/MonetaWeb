@@ -23,13 +23,13 @@
 }
 
 
-
 input[type=text],
 input[type=tel], 
 input[type=mail] {
     width: 100%;
     box-sizing: border-box;
     border: 3px solid #101010;
+    border-radius: 10px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
@@ -42,23 +42,22 @@ input::-webkit-inner-spin-button {
 }
 
 
-
 .custom-select select {
     border: 3px solid #101010; 
+    border-radius: 10px;
 }
 
 
 .cadastrocliente div[class^="col-"] {
     padding: 10px 20px; /* calcula a distancia entro um inpute e outro e os cantos da tela*/
-    
 }
 
 
-
-.btn-toolbar .btn{
+.btn-toolbar .btn {
     margin: auto;
     margin-top: 15px;
     padding:10px 30px;
     border: 3px solid #101010;
+    border-radius: 10px;
     font-weight: bold;
 }
