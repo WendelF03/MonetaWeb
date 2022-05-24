@@ -1,241 +1,165 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  section {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .header {
-    background-color: #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 98.77;
-    height: 50px;
-  }
-  
-  #logo-img {
-    width: 11rem;
-    margin: 25px;
-  }
-  
-  .acoes-header {
-    display: flex;
-    justify-content: space-around;
-  
-    width: 13rem;
-  
-    color: aliceblue;
-  }
-  .menu-lateral {
-    background-color: #626262;
-    color: aliceblue;
-    width: 15rem;
-    height: 87vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 15px;
-  }
-  
-  .menu-lateral ul li a {
-    color: aliceblue;
-    font-weight: bold;
-  }
-  div.horario {
-    margin-top: 22rem;
-    margin-left: 157vh;
-    line-height: 26px;
-    text-align: center;
-    position: fixed;
-    top: 560px;
-    left:-1420px;
-  }
-  
-  div.hora {
-    font-size: 32px;
-    font-weight: bold;
-  }
-  
-  div.data {
-    font-size: 13px;
-  }
+form.simulações{
+  /* position: absolute; */
+  top: 150px;
+  left: 290px;
+  height: 65%;
+  width: 80%;
+  background-color: gainsboro ;
+  border-radius: 10px;
+}
 
-  form.simulações{
-      position: fixed;
-      top: 150px;
-      left: 290px;
-      height: 600px;
-      width: 1110px;
-      background-color: gainsboro ;
-      border-radius: 10px;
-  }
+form div.formu{
+position: relative;
+margin-left: 13%;
+}
 
-  section.menu-lateral h3{
-    position: fixed;
-    top: 80px;
-    left: 750px;
-  }
+div.user{
+position: absolute;
+top: 80px;
+left: 90%;
+}
 
-  div.user{
-    position: fixed;
-    top: 80px;
-    left: 1310px;
-  }
+div.user1{
+display: inline-block;
+}
 
-  div.user1{
-    display: inline-block;
-  }
+label.titulo1{
+position: absolute;
+width: 394px;
+height: 36px;
+left: 28%;
+top: 30px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 36px;
+color: #000000;
+}
 
-  label.titulo1{
-    position: absolute;
-    width: 394px;
-    height: 36px;
-    left: 405px;
-    top: 30px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    color: #000000;
-  }
+label.titulo2{
+box-sizing: border-box;
+position: absolute;
+width: 131.15px;
+height: 32.05px;
+left: 760px;
+top: 142px;
+background: #FFFFFF;
+border: 3px solid #000000;
+border-radius: 50px;
+text-align: center;
+}
 
-  label.titulo2{
-    box-sizing: border-box;
-    position: absolute;
-    width: 131.15px;
-    height: 32.05px;
-    left: 760px;
-    top: 142px;
-    background: #FFFFFF;
-    border: 3px solid #000000;
-    border-radius: 50px;
-    text-align: center;
-  }
+label.titulo3{
+box-sizing: border-box;
+position: absolute;
+width: 231.33px;
+height: 32.05px;
+left: 660px;
+top: 250px;
+background: #FFFFFF;
+border: 3px solid #000000;
+border-radius: 50px;
+text-align: center;
+}
 
-  label.titulo3{
-  box-sizing: border-box;
-  position: absolute;
-  width: 231.33px;
-  height: 32.05px;
-  left: 660px;
-  top: 250px;
-  background: #FFFFFF;
-  border: 3px solid #000000;
-  border-radius: 50px;
-  text-align: center;
-  }
+label.titulo4{
+box-sizing: border-box;
+position: absolute;
+width: 231.33px;
+height: 32.05px;
+left: 660px;
+top: 350px;
+background: #FFFFFF;
+border: 3px solid #000000;
+border-radius: 50px;
+text-align: center;
+}
 
-  label.titulo4{
-    box-sizing: border-box;
-    position: absolute;
-    width: 231.33px;
-    height: 32.05px;
-    left: 660px;
-    top: 350px;
-    background: #FFFFFF;
-    border: 3px solid #000000;
-    border-radius: 50px;
-    text-align: center;
-  }
+label.titulo5{
+box-sizing: border-box;
+position: absolute;
+width: 231.33px;
+height: 32.05px;
+left: 420px;
+top: 467px;
+background: #FFFFFF;
+border: 3px solid #000000;
+border-radius: 50px;
+text-align: center;
+}
 
-  label.titulo5{
-    box-sizing: border-box;
-    position: absolute;
-    width: 231.33px;
-    height: 32.05px;
-    left: 420px;
-    top: 467px;
-    background: #FFFFFF;
-    border: 3px solid #000000;
-    border-radius: 50px;
-    text-align: center;
-  }
+p#resultado{
+box-sizing: border-box;
+position: absolute;
+width: 400px;
+height: 56.9px;
+left: 330px;
+top: 510px;
+background: #fff;
+border: 3px solid #000000;
+border-radius: 20px;
+text-align: center;
+}
 
-  p#resultado{
-    box-sizing: border-box;
-    position: absolute;
-    width: 400px;
-    height: 56.9px;
-    left: 330px;
-    top: 510px;
-    background: #fff;
-    border: 3px solid #000000;
-    border-radius: 20px;
-    text-align: center;
-  }
+input.button{
+box-sizing: border-box;
+position: absolute;
+width: 108.38px;
+height: 32.05px;
+background: #fff;
+border: 3px solid #000000;
+border-radius: 15px;
+}
 
-  input.button{
-    box-sizing: border-box;
-    position: absolute;
-    width: 108.38px;
-    height: 32.05px;
-    background: #fff;
-    border: 3px solid #000000;
-    border-radius: 15px;
-  }
+input#valor{
+box-sizing: border-box;
+position: absolute;
+width: 781.41px;
+height: 56.9px;
+left: 150px;
+top: 162.03px;
+background: #fff;
+border: 3px solid #000000;
+border-radius: 20px;
+}
 
-  input#valor{
-    box-sizing: border-box;
-    position: absolute;
-    width: 781.41px;
-    height: 56.9px;
-    left: 150px;
-    top: 162.03px;
-    background: #fff;
-    border: 3px solid #000000;
-    border-radius: 20px;
-  }
+input#taxa{
+box-sizing: border-box;
+position: absolute;
+width: 781.41px;
+height: 56.9px;
+left: 150px;
+top: 272px;
+background: #fff;
+border: 3px solid #000000;
+border-radius: 20px;
+}
 
-  input#taxa{
-    box-sizing: border-box;
-    position: absolute;
-    width: 781.41px;
-    height: 56.9px;
-    left: 150px;
-    top: 272px;
-    background: #fff;
-    border: 3px solid #000000;
-    border-radius: 20px;
-  }
+input#nPrestacao{
+box-sizing: border-box;
+position: absolute;
+width: 781.41px;
+height: 56.9px;
+left: 150px;
+top: 372px;
+background: #fff;
+border: 3px solid #000000;
+border-radius: 20px;
+}
 
-  input#nPrestacao{
-    box-sizing: border-box;
-    position: absolute;
-    width: 781.41px;
-    height: 56.9px;
-    left: 150px;
-    top: 372px;
-    background: #fff;
-    border: 3px solid #000000;
-    border-radius: 20px;
-  }
+input#simular{
+left: 820px;
+top: 530px;
+}
 
-  input#simular{
-    left: 820px;
-    top: 530px;
-  }
+input#cancelar{
+left: 150px;
+top: 530px;
+}
 
-  input#cancelar{
-    left: 150px;
-    top: 530px;
-  }
-
-  h4{
-    position: fixed;
-    left: 730px;
-    top: 100px;
-  }
+h4{
+position: absolute;
+left: 45.2%;
+top: 100px;
+}

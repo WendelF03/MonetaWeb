@@ -1,0 +1,91 @@
+
+/*
+    STYLE CADASTRO DO USUÁRIO
+*/
+
+body{
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    background: #fafbfc;
+  }
+  h1,h2{
+    margin: 0;
+  }
+  header{
+    background: #000;
+    padding: 5px 10px;
+    color: #fff;
+    text-align: center;
+  }
+  header img {
+    width: 300px;
+  }
+  main{
+    padding: 30px 50px;
+  }
+  .title{
+    text-align: center;
+  }
+  .card{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  .lineInput{
+    display: grid;
+    margin-bottom: 10px;
+  }
+  input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: 0;
+  }
+  button{
+    border: 0px;
+    padding: 10px;
+    outline: 0;
+    background-color: #000;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: all ease 0.3s;
+    
+  }
+  .botao1{
+      background: #c2c2c2;
+      color:#010101;
+      margin-bottom: 5px;
+  }
+  .botoes button{
+      justify-content: center;
+      width: 200px;
+  }
+  button:hover{
+    background-color: #474a51;
+    ;
+  }
+  
+  .content{
+    margin-top: 15px;
+  }
+  table{
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  table th{
+    background-color: #ccc;
+  }
+  table th, td{
+    text-align: left;
+    padding: 1px 5px;
+  }
+  table td img{
+    width: 20px;
+  }
+  .center{
+    text-align: center;
+  }

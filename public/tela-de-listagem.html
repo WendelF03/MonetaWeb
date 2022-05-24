@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>MonetaWeb - Home</title>
+    <title>MonetaWeb - Cadastro/lista de Clientes</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="../src/assets/styles/style-tela-de-cadastro.css">
     <link rel="stylesheet" href="../src/assets/styles/style.css">
-
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -56,8 +55,8 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#homeSubmenu">
+                <li>
+                    <a href="./index.html">
                         <i class="fas fa-home"></i>
                         <b>Home</b>
                     </a>
@@ -68,8 +67,8 @@
                         <b>Contas a Pagar/Receber</b>
                     </a>
                 </li>
-                <li>
-                    <a href="./tela-de-listagem.html">
+                <li class="active">
+                    <a href="#">
                         <i class="fas fa-users"></i>
                         <b>Clientes</b>
                     </a>
@@ -164,36 +163,74 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="./index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Principal</a>
+                                <a class="nav-link" href="#">Clientes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"></a>
+                                <a class="nav-link" href="#listagem">Listagem</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            <div class="card">
+                <div class="title">
+                    <h2>Cadastro de Clientes</h2>
+                </div>
+                <div class="lineInput">
+                    <label>Nome</label>
+                    <input type="text" id="produto" placeholder="Nome do Cliente">
+                </div>
+
+                <div class="lineInput">
+                    <label>E-mail</label>
+                    <input type="email" name="email" requerid id="preco" placeholder="E-mail do cliente">
+                </div>
+
+                <div class="botoes">
+                    <button onclick="produto.salvar()" id="btn1" class="botao1">Cadastrar</button>
+                    <button onclick="produto.cancelar()">Cancelar</button>
+                </div>
+
+                <div class="line"></div>
+
+
+                <div id="listagem" class="content">
+                    <div class="title">
+                        <h2>Lista de Clientes</h2>
+                    </div>
+                    <table border="1">
+                        <thead>
+                            <th class="center">Código</th>
+                            <th>Produto</th>
+                            <th>E-mail</th>
+                            <th class="center">Ações</th>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <script src="./script.js"></script>
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
             });
-        });
-    </script>
+        </script>
 </body>
 
 </html>
