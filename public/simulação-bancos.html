@@ -7,13 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="imagem/png" href="../src/assets/images/favicon.ico" />
 
-    <title>MonetaWeb | Cadastro/lista de Clientes</title>
+    <title>MonetaWeb | Banco</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="../src/assets/styles/style-tela-de-cadastro.css">
     <link rel="stylesheet" href="../src/assets/styles/style.css">
+    <link rel="stylesheet" href="../src/assets/styles/simulação-bancos.css">
+
+
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -56,8 +59,8 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li>
-                    <a href="./index.html">
+                <li class="active">
+                    <a href="./home-tela.html">
                         <i class="fas fa-home"></i>
                         <b>Home</b>
                     </a>
@@ -68,8 +71,8 @@
                         <b>Contas a Pagar/Receber</b>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="#">
+                <li>
+                    <a href="./tela-de-listagem.html">
                         <i class="fas fa-users"></i>
                         <b>Clientes</b>
                     </a>
@@ -118,13 +121,13 @@
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="../public/Simulação_Emprestimo.html">Empréstimos</a>
+                            <a href="../public/Simulação-Emprestimo.html">Empréstimos</a>
                         </li>
                         <li>
                             <a href="#">Amortização</a>
                         </li>
                         <li>
-                            <a href="./simulação_bancos.html">Bancos</a>
+                            <a href="">Bancos</a>
                         </li>
                     </ul>
                 </li>
@@ -166,72 +169,126 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="./index.html">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Clientes</a>
+                            <li class="nav-item2">
+                                <a class="nav-link" href="#">Simulações</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#listagem">Listagem</a>
+                            <li class="nav-item3">
+                                <a class="nav-link" href="#listagem">Bancos</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <div class="card">
-                <div class="title">
-                    <h2>Cadastro de Clientes</h2>
-                </div>
-                <div class="lineInput">
-                    <label>Nome</label>
-                    <input type="text" id="produto" placeholder="Nome do Cliente">
-                </div>
-
-                <div class="lineInput">
-                    <label>E-mail</label>
-                    <input type="email" name="email" requerid id="preco" placeholder="E-mail do cliente">
-                </div>
-
-                <div class="botoes">
-                    <button onclick="produto.salvar()" id="btn1" class="botao1">Cadastrar</button>
-                    <button onclick="produto.cancelar()">Cancelar</button>
-                </div>
-
-                <div class="line"></div>
-
-
-                <div id="listagem" class="content">
-                    <div class="title">
-                        <h2>Lista de Clientes</h2>
-                    </div>
-                    <table border="1">
-                        <thead>
-                            <th class="center">Código</th>
-                            <th>Produto</th>
-                            <th>E-mail</th>
-                            <th class="center">Ações</th>
-                        </thead>
-                        <tbody id="tbody">
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
         </div>
+        <form id="simulações" class="simulações">
+            <label class="titulo1">Melhores Taxas de Juros</label>
+            <label class="titulo2">Nós organizamos para você as melhores taxas de juros do mercado com base no <a href="https://www.bcb.gov.br/estatisticas/txjuros" class="titulo3" >relatório do Banco Central do Brasil</a> atualizado em maio de 2022.</label>
+            <a class="MEI">Modalidades - Pessoa Jurídica:</a>    
+            <div class="cards">
+                <article class="card">
+                    <a href="#">
+                        <div class="card_content">
+                            <h3 class="card_title">Bnco Daycoval <span class="card_subtitle">1°</span></h3> 
+                            <p class="card_description">Desconto de duplicatas </p>
+                        </div>
+                    </a>
+                </article>
+                <article class="card2">
+                    <a href="#">
+                        <div class="card_content2">
+                            <h3 class="card_title2">Bnco Citibank <span class="card_subtitle2">2°</span></h3>
+                            <p class="card_description2">Capital de giro com prazo até 365 dias</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="card3">
+                    <a href="#">
+                        <div class="card_content3">
+                            <h3 class="card_title3">Bnco Banrisul  <span class="card_subtitle3">3°</span></h3>
+                            <p class="card_description3">Desconto de cheques</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="card4">
+                    <a href="#">
+                        <div class="card_content4">
+                            <h3 class="card_title4">Bnco BMG<span class="card_subtitle4">4°</span></h3>
+                            <p class="card_description4">Conta garantida </p>
+                        </div>
+                    </a>    
+                </article>
+                <article class="card5">
+                    <a href="#">
+                        <div class="card_content5">
+                            <h3 class="card_title5"> Bnco Nordeste<span class="card_subtitle5">5°</span></h3>
+                            <p class="card_description5">Cheque especial</p>
+                        </div>
+                    </a>
+                </article>
+                <a class="maismoda" href="#">Mais modalidades >></a>  
+                <a class="pessoal">Modalidades - Pessoal Física:</a>  
+            </div>
+            <div class="cards">
+                <article class="card6">
+                    <a href="#">
+                        <div class="card_content6">
+                            <h3 class="card_title6">Gerencianet <span class="card_subtitle6">1°</span></h3> 
+                            <p class="card_description6">Cartão de crédito parcelado</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="card7">
+                    <a href="#">
+                        <div class="card_content7">
+                            <h3 class="card_title7">Cetelem <span class="card_subtitle7">2°</span></h3>
+                            <p class="card_description7">Aquisição de outros bens</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="card8">
+                    <a href="#"> 
+                        <div class="card_content8">
+                            <h3 class="card_title8">Poupex  <span class="card_subtitle8">3°</span></h3>
+                            <p class="card_description8">Financiamento imobiliário com taxas de mercado</p>
+                        </div>
+                    </a>    
+                </article>
+                <article class="card9">
+                    <a href="#"> 
+                        <div class="card_content9">
+                            <h3 class="card_title9">Bnco Modal <span class="card_subtitle9">4°</span></h3>
+                            <p class="card_description9">Cheque especial</p>
+                        </div>
+                    </a>    
+                </article>
+                <article class="card10">
+                    <a href="#"> 
+                        <div class="card_content10">
+                            <h3 class="card_title10">Bnco Paccar <span class="card_subtitle10">5°</span></h3>
+                            <p class="card_description10">Aquisição de veículos</p>
+                        </div>
+                    </a>    
+                </article>
+                <a class="maismoda2" href="#">Mais modalidades >></a>   
+            </div>
+        </form>
+    </div>
 
-        <script src="./script.js"></script>
-        <!-- jQuery CDN - Slim version (=without AJAX) -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <!-- Popper.JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-        <!-- Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar').toggleClass('active');
-                });
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
             });
-        </script>
+        });
+    </script>
 </body>
 
 </html>

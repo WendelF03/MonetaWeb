@@ -14,6 +14,7 @@
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="../src/assets/styles/style-tela-de-cadastro.css">
     <link rel="stylesheet" href="../src/assets/styles/style.css">
+    <link rel="stylesheet" href="../src/assets/styles/simulações.css">
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -57,7 +58,7 @@
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="./index.html">
+                    <a href="../public/index.html">
                         <i class="fas fa-home"></i>
                         <b>Home</b>
                     </a>
@@ -68,8 +69,8 @@
                         <b>Contas a Pagar/Receber</b>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="#">
+                <li >
+                    <a href="../public/tela-de-listagem.html">
                         <i class="fas fa-users"></i>
                         <b>Clientes</b>
                     </a>
@@ -110,21 +111,20 @@
                         <b>Relatórios</b>
                     </a>
                 </li>
-                <li>
-
+                <li class="active">
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-chart-line"></i>
                         <b>Simulações</b>
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="../public/Simulação_Emprestimo.html">Empréstimos</a>
+                            <a href="../public/Simulação-Emprestimo.html">Empréstimos</a>
                         </li>
                         <li>
                             <a href="#">Amortização</a>
                         </li>
                         <li>
-                            <a href="./simulação_bancos.html">Bancos</a>
+                            <a href="./simulação-bancos.html">Bancos</a>
                         </li>
                     </ul>
                 </li>
@@ -167,54 +167,30 @@
                                 <a class="nav-link" href="./index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Clientes</a>
+                                <a class="nav-link" href="#">Simulações</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#listagem">Listagem</a>
+                                <a class="nav-link" href="#listagem">Empréstimos</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <div class="card">
-                <div class="title">
-                    <h2>Cadastro de Clientes</h2>
-                </div>
-                <div class="lineInput">
-                    <label>Nome</label>
-                    <input type="text" id="produto" placeholder="Nome do Cliente">
-                </div>
-
-                <div class="lineInput">
-                    <label>E-mail</label>
-                    <input type="email" name="email" requerid id="preco" placeholder="E-mail do cliente">
-                </div>
-
-                <div class="botoes">
-                    <button onclick="produto.salvar()" id="btn1" class="botao1">Cadastrar</button>
-                    <button onclick="produto.cancelar()">Cancelar</button>
-                </div>
-
-                <div class="line"></div>
-
-
-                <div id="listagem" class="content">
-                    <div class="title">
-                        <h2>Lista de Clientes</h2>
-                    </div>
-                    <table border="1">
-                        <thead>
-                            <th class="center">Código</th>
-                            <th>Produto</th>
-                            <th>E-mail</th>
-                            <th class="center">Ações</th>
-                        </thead>
-                        <tbody id="tbody">
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <form id="simulações" class="simulações">
+              <label class="titulo1">Simulador de Empréstimos</label>
+              <input type="number" name="valor" id="valor" placeholder="Digite o Valor">
+              <label class="titulo2">Valor solicitado</label>
+              <input type="number" name="taxa" id="taxa" placeholder="Digite o Valor">
+              <label class="titulo3">Taxa de Juros </label>
+              <input type="number" name="nPrestacao" id="nPrestacao" placeholder="Digite o números de parcelas">
+              <label class="titulo4">Números de prestações</label>
+              <p id="resultado"></p>
+              <label class="titulo5">Valor das Prestações</label>
+              <input type="button" value="Simular" class="button" id="simular">
+              <input type="reset" value="Cancelar" class="button" id="cancelar">
+            </form>
+            <script src="./silmulacoes.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         </div>
 
         <script src="./script.js"></script>

@@ -288,3 +288,22 @@ h4 {
   left: 45.2%;
   top: 100px;
 }
+
+/*scroll-bar*/
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d3d3d;
+  border-radius: 5px;
+  height: 0.8vw;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+  width: 0.8vw;
+  opacity: 0;
+  height: 0.8vw;
+}
+
+::-webkit-scrollbar {
+  width: 0.8vw;
+}
