@@ -1,20 +1,20 @@
 .main {
     background-color: #dbdbdb;
-    margin-top: 10px ;
-    padding: 20px;
+    margin: auto ;
+    padding: 30px;
+    border: 2px solid #a3a1a1;
+    border-radius: 15px;
 }
 
 .cadastrocliente {
     height: 100%;
-    padding-left: 50px;
     width: 100%;  
     margin: 0;
 }
 
 
 .i-am-centered { 
-    margin: auto; 
-    max-width: 1200px;
+    margin: auto;
 }
 
 .control-label {
@@ -25,7 +25,8 @@
 
 input[type=text],
 input[type=tel], 
-input[type=mail] {
+input[type=mail],
+.custom select  {
     width: 100%;
     box-sizing: border-box;
     border: 3px solid #101010;
@@ -33,6 +34,8 @@ input[type=mail] {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
+    padding: 4px;
+
 }
 
 input::-webkit-outer-spin-button,
@@ -42,14 +45,8 @@ input::-webkit-inner-spin-button {
 }
 
 
-.custom-select select {
-    border: 3px solid #101010; 
-    border-radius: 10px;
-}
-
-
 .cadastrocliente div[class^="col-"] {
-    padding: 10px 20px; /* calcula a distancia entro um inpute e outro e os cantos da tela*/
+    padding: 5px 20px; /* calcula a distancia entro um inpute e outro e os cantos da tela*/
 }
 
 
@@ -60,23 +57,5 @@ input::-webkit-inner-spin-button {
     border: 3px solid #101010;
     border-radius: 10px;
     font-weight: bold;
-}
-
-/*scroll-bar*/
-
-::-webkit-scrollbar-thumb {
-    background-color: #3d3d3d;
-    border-radius: 5px;
-    height: 0.8vw;
-}
-
-::-webkit-scrollbar-track {
-    background-color: #000000;
-    width: 0.8vw;
-    opacity: 0;
-    height: 0.8vw;
-}
-
-::-webkit-scrollbar {
-    width: 0.8vw;
+    color: #fafafa
 }

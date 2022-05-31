@@ -1,232 +1,334 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../src/assets/styles/cadastro-cliente.css" rel="stylesheet">
-  <link href="../src/assets/styles/clientelista.css" rel="stylesheet">
-  <link href="./../src/assets/styles/style.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="icon" type="imagem/png" href="../src/assets/images/favicon.ico" />
-  <script src="./index.js"></script>
-  <title>MonetaWeb | Cadastro Cliente</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="imagem/png" href="../src/assets/images/favicon.ico" />
+    <title>MonetaWeb | Home</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../src/assets/styles/style-tela-de-cadastro.css">
+    <link rel="stylesheet" href="../src/assets/styles/style.css">
+    <link rel="stylesheet" href="../src/assets/styles/cadastro-cliente.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-  <header class="header">
-    <a class="nav-link" href="./index.html"><img src="./../src/assets/images/logo-monetaweb.png" alt="Logo MonetaWeb" id="logo-img"></a>
+    <header class="header">
+        <a class="nav-link" href="#"><img src="./../src/assets/images/logo-monetaweb.png" alt="Logo MonetaWeb" id="logo-img"></a>
 
-    <div class="acoes-header">
+        <div class="acoes-header">
 
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
-        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
-      </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+            </svg>
 
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
-      </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+            </svg>
 
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-      </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+            </svg>
 
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
-        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
-      </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+            </svg>
 
-    </div>
-  </header>
-  <!--Dashboard-->
-  <section>
-    <div class="menu-lateral">
-      <h3>Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-        </svg></h3>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contas a pagar/receber</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#clientes">Clientes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Fornecedores</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tabelas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contas bancárias</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Favorecidos Pgto/Rcto</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cheques</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Relatórios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Simulações</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Utilitários</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Configurações</a>
-        </li>
-      </ul>
-    </div>
-    <!--barra fixa abaixo da header-->
-    <div class="container-barra-fixa-geral">
-      <div class="barra-fixa-geral">
-        <div class="icone-home">
-          <a href="#"><img src="../src/assets/images/menu.png" alt="menu"></a>
         </div>
-        <div class="guia">
-          <ul class="barra-fixa-home">
-            <li><a href="#" class="homeLink">Home</a></li>
-            <li class="traco1">-</li>
-            <li><a href="#cliente" class="clienteLink">Clientes</a></li>
-            <li class="traco2">-</li>
-            <li><a href="#cliente-lista" class="listaLink">Lista</a></li>
-          </ul>
-        </div>
-        <div class="usuario">
-          <p>Samuel Sena<a href="#perfil"><img class="avatar" src="../src/assets/images/Avatar.png" alt=""></a></p>
-          <span class="online"><input class="ponto-online" type="radio" checked autocomplete="off">Online</span>
-        </div>
-      </div>
 
-  
-      <!--Main-->
+    </header>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Samuel Sena</h3>
+                <strong>SS</strong>
+            </div>
 
-      <div class="main container-fluid">
-        <div class="i-am-centered">
-          <div class="row">
-            <div class="col-12">
-            
-              <!--Form cadastro-->
-              
-              <div class="form-horizontal cadastrocliente">
-                <div class="form-group row">
-                  <div class="col-md-7">
-                    <label asp-for="codigo" class="control-label">Código:</label> 
-                    <input id="codigo" type="text" class="form-control text-uppercase">                   
-                  </div>
-                  <div class="col-md-5">
-                    <label asp-for="cpf" class="control-label">CPF/CNPJ:</label>                   
-                    <input id="cpf" type="text" pattern="[0-9]+$" class="form-control" placeholder="000.000.000-00">                    
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-md-12">
-                    <label asp-for="nome_cliente" class="control-label">Nome do Cliente:</label>                     
-                    <input id="nome_cliente" type="text" pattern="[a-z\s]+$" class="form-control text-uppercase">                    
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-md-3">
-                    <label asp-for="telefone" class="control-label">Telefone:</label>                   
-                    <input id="telefone" type="tel" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" class="form-control">                
-                  </div>
-                  <div class="col-md-3">
-                    <label asp-for="celular" class="control-label">Celular:</label>                   
-                    <input id="celular" type="tel"  pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" class="form-control">                   
-                  </div>
-                  <div class="col-md-6">
-                    <label asp-for="email" class="control-label">Email:</label>                   
-                    <input id="email" type="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control">                
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-md-5">
-                    <label asp-for="cep" class="control-label">CEP:</label>              
-                    <input id="cep" type="text" pattern="[0-9]+$" class="form-control" placeholder="00000-000">                  
-                  </div>
-                  <div class="col-md-7">
-                    <label asp-for="endereço" class="control-label">Endereço:</label>                  
-                    <input id="endereço" type="text" class="form-control text-uppercase">                   
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-md-4">
-                    <label asp-for="estado" class="control-label">Estado:</label> 
-                    <div class="custom-select">
-                      <select id="estado" data-modal=""  data-plugin="selectpicker" title="Selecione uma opção" class="form-select show-tick show-menu-arrow">                
-                      <option value="ac">AC</option> 
-                      <option value="al">AL</option> 
-                      <option value="am">AM</option> 
-                      <option value="ap">AP</option> 
-                      <option value="ba">BA</option> 
-                      <option value="ce">CE</option> 
-                      <option value="df">DF</option> 
-                      <option value="es">ES</option> 
-                      <option value="go">GO</option> 
-                      <option value="ma">MA</option> 
-                      <option value="mt">MT</option> 
-                      <option value="ms">MS</option> 
-                      <option value="mg">MG</option> 
-                      <option value="pa">PA</option> 
-                      <option value="pb">PB</option> 
-                      <option value="pr">PR</option> 
-                      <option value="pe" selected>PE</option> 
-                      <option value="pi">PI</option> 
-                      <option value="rj">RJ</option> 
-                      <option value="rn">RN</option> 
-                      <option value="ro">RO</option> 
-                      <option value="rs">RS</option> 
-                      <option value="rr">RR</option> 
-                      <option value="sc">SC</option> 
-                      <option value="se">SE</option> 
-                      <option value="sp">SP</option> 
-                      <option value="to">TO</option> 
-                      </select>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu">
+                        <i class="fas fa-home"></i>
+                        <b>Home</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-wallet"></i>
+                        <b>Contas a Pagar/Receber</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="./tela-de-listagem.html">
+                        <i class="fas fa-users"></i>
+                        <b>Clientes</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cube"></i>
+                        <b>Fornecedores</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-table"></i>
+                        <b>Tabelas</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-file"></i>
+                        <b>Contas Bancárias</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-users"></i>
+                        <b>Favorecidos Pgto/Rcto</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-money-bill"></i>
+                        <b>Cheques</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-folder"></i>
+                        <b>Relatórios</b>
+                    </a>
+                </li>
+                <li>
+
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-chart-line"></i>
+                        <b>Simulações</b>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="../public/Simulação-Emprestimo.html">Empréstimos</a>
+                        </li>
+                        <li>
+                            <a href="#">Amortização</a>
+                        </li>
+                        <li>
+                            <a href="../public/Simulação-Bancos.html">Bancos</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                        <b>Utilitários</b>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="#" class="download">Configurações</a>
+                </li>
+                <li>
+                    <a href="#" class="article">Sair</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Cadastro</a>
+                            </li>
+                        </ul>
                     </div>
-                  </div>
-                  <div class="col-md-8">
-                    <label asp-for="inscriçao_municipal" class="control-label">Inscrição Municipal:</label>                     
-                    <input id="inscriçao_municipal" type="text" pattern="[0-9]+$" class="form-control text-uppercase">                    
-                  </div>
                 </div>
-                <div class="form-group row">
-                  <div class="col-md-5">
-                    <label asp-for="cidade" class="control-label">Cidade:</label>                     
-                    <input id="cidade" type="text" pattern="[a-z\s]+$" class="form-control text-uppercase">                 
-                  </div>
-                  <div class="col-md-7">
-                    <label asp-for="codigo_siape" class="control-label">Código SIAPE:</label>  
-                    <input id="codigo_siape" type="text"  pattern="[0-9]+$" class="form-control text-uppercase">                  
+            </nav>
+
+            <!--CadastroCliente-->
+
+            <!--Main-->
+
+            <div class="main container-fluid">
+              <div class="i-am-centered">
+                <div class="row">
+                  <div class="col-12">
+                  
+                    <!--Form cadastro-->
+                    
+                    <div class="form-horizontal cadastrocliente">
+                      <div class="form-group row">
+                        <div class="col-7">
+                          <label for="codigo" class="control-label">Código:</label> 
+                          <input id="codigo" type="text" class="form-control text-uppercase">                   
+                        </div>
+                        <div class="col-5">
+                          <label for="cpf" class="control-label">CPF/CNPJ:</label>                   
+                          <input id="cpf" type="text" pattern="[0-9]+$" class="form-control" placeholder="000.000.000-00">                    
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-12">
+                          <label for="nome_cliente" class="control-label">Nome do Cliente:</label>                     
+                          <input id="nome_cliente" type="text" pattern="[a-z\s]+$" class="form-control text-uppercase">                    
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-3">
+                          <label for="telefone" class="control-label">Telefone:</label>                   
+                          <input id="telefone" type="tel" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" class="form-control">                
+                        </div>
+                        <div class="col-3">
+                          <label for="celular" class="control-label">Celular:</label>                   
+                          <input id="celular" type="tel"  pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" class="form-control">                   
+                        </div>
+                        <div class="col-6">
+                          <label for="email" class="control-label">Email:</label>                   
+                          <input id="email" type="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control">                
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-5">
+                          <label for="cep" class="control-label">CEP:</label>              
+                          <input id="cep" type="text" pattern="[0-9]+$" class="form-control" placeholder="00000-000">                  
+                        </div>
+                        <div class="col-7">
+                          <label for="endereço" class="control-label">Endereço:</label>                  
+                          <input id="endereço" type="text" class="form-control text-uppercase">                   
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        
+                        <div class="col-md-4">
+                          <label asp-for="estado" class="control-label">Estado:</label> 
+                          <div class="custom">
+                            <select id="estado" data-modal=""  data-plugin="selectpicker" title="Selecione uma opção" class="custom-select form-select show-tick show-menu-arrow">                
+                            <option value="ac">AC</option> 
+                            <option value="al">AL</option> 
+                            <option value="am">AM</option> 
+                            <option value="ap">AP</option> 
+                            <option value="ba">BA</option> 
+                            <option value="ce">CE</option> 
+                            <option value="df">DF</option> 
+                            <option value="es">ES</option> 
+                            <option value="go">GO</option> 
+                            <option value="ma">MA</option> 
+                            <option value="mt">MT</option> 
+                            <option value="ms">MS</option> 
+                            <option value="mg">MG</option> 
+                            <option value="pa">PA</option> 
+                            <option value="pb">PB</option> 
+                            <option value="pr">PR</option> 
+                            <option value="pe" selected>PE</option> 
+                            <option value="pi">PI</option> 
+                            <option value="rj">RJ</option> 
+                            <option value="rn">RN</option> 
+                            <option value="ro">RO</option> 
+                            <option value="rs">RS</option> 
+                            <option value="rr">RR</option> 
+                            <option value="sc">SC</option> 
+                            <option value="se">SE</option> 
+                            <option value="sp">SP</option> 
+                            <option value="to">TO</option> 
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-8">
+                          <label for="inscriçao_municipal" class="control-label">Inscrição Municipal:</label>                     
+                          <input id="inscriçao_municipal" type="text" pattern="[0-9]+$" class="form-control text-uppercase">                    
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-5">
+                          <label for="cidade" class="control-label">Cidade:</label>                     
+                          <input id="cidade" type="text" pattern="[a-z\s]+$" class="form-control text-uppercase">                 
+                        </div>
+                        <div class="col-7">
+                          <label for="codigo_siape" class="control-label">Código SIAPE:</label>  
+                          <input id="codigo_siape" type="text"  pattern="[0-9]+$" class="form-control text-uppercase">                  
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              
+              <!--bottons-->
+              <div class="btn-toolbar text-center well">
+                <button type="button" class="btn btn-danger btn-color btn-bg-color btn-sm col-xs-2">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Cancelar
+            
+                <button type="button" class="btn btn-warning btn-color btn-bg-color btn-sm col-xs-2">
+                  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Adicionar
+                </button>
+              </div>
             </div>
           </div>
+
+
+        
+        
         </div>
-         
-        <!--bottons-->
-        <div class="btn-toolbar text-center well">
-          <button type="button" class="btn btn-danger btn-color btn-bg-color btn-sm col-xs-2">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Cancelar
-      
-          <button type="button" class="btn btn-warning btn-color btn-bg-color btn-sm col-xs-2">
-            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Adicionar
-          </button>
+    </div>
+
+    <script src="./script.js"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+    <div id="overlay" class="overlay">
+        <div class="loading">
+  
+          <div></div>
+          <div></div>
+          <div></div>
+    
         </div>
       </div>
-    </div>
-  </section>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
