@@ -1,309 +1,110 @@
-* {
+
+/*
+    STYLE CADASTRO DO USUÁRIO
+*/
+
+body{
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+  background: #fafbfc;
 }
-section {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+h1,h2{
+  margin: 0;
+}
+header{
+  background: #000;
+  padding: 5px 10px;
+  color: #fff;
+  text-align: center;
+}
+header img {
+  width: 300px;
+}
+main{
+  padding: 30px 50px;
+}
+.title{
+  text-align: center;
+}
+.card{
   background-color: #fff;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
-
-body {
-  width: 100%;
-  height: 100%;
+.lineInput{
+  display: grid;
+  margin-bottom: 10px;
 }
-
-.header {
+input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: 0;
+}
+button{
+  border: 0px;
+  padding: 10px;
+  outline: 0;
   background-color: #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 98.77;
-  height: 50px;
-}
-
-#logo-img {
-  width: 11rem;
-  margin: 25px;
-}
-
-.acoes-header {
-  display: flex;
-  justify-content: space-around;
-
-  width: 13rem;
-
-  color: aliceblue;
-}
-.menu-lateral {
-  background-color: #626262;
-  color: aliceblue;
-  width: 15rem;
-  height: 87vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 15px;
-}
-
-.menu-lateral ul li a {
-  color: aliceblue;
+  color: #fff;
+  border-radius: 3px;
   font-weight: bold;
+  transition: all ease 0.3s;
+  
 }
-div.horario {
-  margin-top: 22rem;
-  margin-left: 157vh;
-  line-height: 26px;
+.botao1{
+    background: #c2c2c2;
+    color:#010101;
+    margin-bottom: 5px;
+}
+.botoes button{
+    justify-content: center;
+    width: 200px;
+}
+button:hover{
+  background-color: #474a51;
+  ;
+}
+
+.content{
+  margin-top: 15px;
+}
+table{
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+table th{
+  background-color: #ccc;
+}
+table th, td{
+  text-align: left;
+  padding: 1px 5px;
+}
+table td img{
+  width: 20px;
+}
+.center{
   text-align: center;
-  position: fixed;
-  top: 560px;
-  left: -1420px;
-}
-
-section.menu-lateral h3 {
-  position: fixed;
-  top: 80px;
-  left: 750px;
-}
-
-form.simulações {
-  position: absolute;
-  top: 150px;
-  left: 290px;
-  height: 65%;
-  width: 80%;
-  background-color: gainsboro;
-  border-radius: 10px;
-}
-
-form div.formu {
-  position: relative;
-  margin-left: 13%;
-}
-
-div.user {
-  position: absolute;
-  top: 80px;
-  left: 90%;
-}
-
-div.user1 {
-  display: inline-block;
-}
-
-label.titulo1 {
-  position: absolute;
-  width: 394px;
-  height: 36px;
-  left: 28%;
-  top: 30px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  color: #000000;
-}
-
-label.titulo2 {
-  box-sizing: border-box;
-  position: absolute;
-  width: 131.15px;
-  height: 32.05px;
-  left: 760px;
-  top: 142px;
-  background: #ffffff;
-  border: 3px solid #000000;
-  border-radius: 50px;
-  text-align: center;
-}
-
-label.titulo3 {
-  box-sizing: border-box;
-  position: absolute;
-  top: 150px;
-  left: 290px;
-  height: 65%;
-  width: 80%;
-  background-color: gainsboro;
-  border-radius: 10px;
-}
-
-form div.formu {
-  position: relative;
-  margin-left: 13%;
-}
-
-div.user {
-  position: absolute;
-  top: 80px;
-  left: 90%;
-}
-
-div.user1 {
-  display: inline-block;
-}
-
-label.titulo1 {
-  position: absolute;
-  width: 394px;
-  height: 36px;
-  left: 28%;
-  top: 30px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  color: #000000;
-}
-
-label.titulo2 {
-  box-sizing: border-box;
-  position: absolute;
-  width: 131.15px;
-  height: 32.05px;
-  left: 760px;
-  top: 142px;
-  background: #ffffff;
-  border: 3px solid #000000;
-  border-radius: 50px;
-  text-align: center;
-}
-
-label.titulo3 {
-  box-sizing: border-box;
-  position: absolute;
-  width: 231.33px;
-  height: 32.05px;
-  left: 660px;
-  top: 250px;
-  background: #ffffff;
-  border: 3px solid #000000;
-  border-radius: 50px;
-  text-align: center;
-}
-
-label.titulo4 {
-  box-sizing: border-box;
-  position: absolute;
-  width: 231.33px;
-  height: 32.05px;
-  left: 660px;
-  top: 350px;
-  background: #ffffff;
-  border: 3px solid #000000;
-  border-radius: 50px;
-  text-align: center;
-}
-
-label.titulo5 {
-  box-sizing: border-box;
-  position: absolute;
-  width: 231.33px;
-  height: 32.05px;
-  left: 420px;
-  top: 467px;
-  background: #ffffff;
-  border: 3px solid #000000;
-  border-radius: 50px;
-  text-align: center;
-}
-
-p#resultado {
-  box-sizing: border-box;
-  position: absolute;
-  width: 400px;
-  height: 56.9px;
-  left: 330px;
-  top: 510px;
-  background: #fff;
-  border: 3px solid #000000;
-  border-radius: 20px;
-  text-align: center;
-}
-
-input.button {
-  box-sizing: border-box;
-  position: absolute;
-  width: 108.38px;
-  height: 32.05px;
-  background: #fff;
-  border: 3px solid #000000;
-  border-radius: 15px;
-}
-
-input#valor {
-  box-sizing: border-box;
-  position: absolute;
-  width: 781.41px;
-  height: 56.9px;
-  left: 150px;
-  top: 162.03px;
-  background: #fff;
-  border: 3px solid #000000;
-  border-radius: 20px;
-}
-
-input#taxa {
-  box-sizing: border-box;
-  position: absolute;
-  width: 781.41px;
-  height: 56.9px;
-  left: 150px;
-  top: 272px;
-  background: #fff;
-  border: 3px solid #000000;
-  border-radius: 20px;
-}
-
-input#nPrestacao {
-  box-sizing: border-box;
-  position: absolute;
-  width: 781.41px;
-  height: 56.9px;
-  left: 150px;
-  top: 372px;
-  background: #fff;
-  border: 3px solid #000000;
-  border-radius: 20px;
-}
-
-input#simular {
-  left: 820px;
-  top: 530px;
-}
-
-input#cancelar {
-  left: 150px;
-  top: 530px;
-}
-
-h4 {
-  position: absolute;
-  left: 45.2%;
-  top: 100px;
 }
 
 /*scroll-bar*/
 
 ::-webkit-scrollbar-thumb {
-  background-color: #3d3d3d;
-  border-radius: 5px;
-  height: 0.8vw;
+background-color: #3d3d3d;
+border-radius: 5px;
+height: 0.8vw;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #000000;
-  width: 0.8vw;
-  opacity: 0;
-  height: 0.8vw;
+background-color: #000000;
+width: 0.8vw;
+opacity: 0;
+height: 0.8vw;
 }
 
 ::-webkit-scrollbar {
-  width: 0.8vw;
+width: 0.8vw;
 }
