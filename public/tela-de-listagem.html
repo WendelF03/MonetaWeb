@@ -57,7 +57,7 @@
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="./index.html">
+                    <a href="../home-tela.html">
                         <i class="fas fa-home"></i>
                         <b>Home</b>
                     </a>
@@ -69,10 +69,21 @@
                     </a>
                 </li>
                 <li class="active">
-                    <a href="#">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"">
                         <i class="fas fa-users"></i>
                         <b>Clientes</b>
                     </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li >
+                            <a href="#">Lista de Clientes</a>
+                        </li>
+                        <li>
+                            <a href="./cadastro-cliente.html">Cadastro de Clientes</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#">Home 3</a>
+                        </li> -->
+                    </ul>
                 </li>
                 <li>
                     <a href="#">
@@ -118,13 +129,13 @@
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="../public/Simulação_Emprestimo.html">Empréstimos</a>
+                            <a href="./simulação-emprestimo.html">Empréstimos</a>
                         </li>
                         <li>
                             <a href="#">Amortização</a>
                         </li>
                         <li>
-                            <a href="./simulação_bancos.html">Bancos</a>
+                            <a href="./simulação-bancos.html">Catálogo de Bancos</a>
                         </li>
                     </ul>
                 </li>
@@ -189,6 +200,12 @@
                     <label>E-mail</label>
                     <input type="email" name="email" requerid id="preco" placeholder="E-mail do cliente">
                 </div>
+                
+                <div class="lineInput">
+                    <label>telefone</label>
+                    <input type="email" name="email" requerid id="preco" placeholder="E-mail do cliente">
+                </div>
+                
 
                 <div class="botoes">
                     <button onclick="produto.salvar()" id="btn1" class="botao1">Cadastrar</button>

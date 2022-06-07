@@ -12,9 +12,9 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="../src/assets/styles/style-tela-de-cadastro.css">
-    <link rel="stylesheet" href="../src/assets/styles/style.css">
     <link rel="stylesheet" href="../src/assets/styles/simulação-bancos.css">
+    <link rel="stylesheet" href="../src/assets/styles/style.css">
+
 
 
     <!-- Font Awesome JS -->
@@ -60,7 +60,7 @@
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href="./home-tela.html">
+                    <a href="../home-tela.html">
                         <i class="fas fa-home"></i>
                         <b>Home</b>
                     </a>
@@ -72,10 +72,21 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./tela-de-listagem.html">
+                    <a href="#homeSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-users"></i>
                         <b>Clientes</b>
                     </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="./tela-de-listagem.html">Lista de Clientes</a>
+                        </li>
+                        <li>
+                            <a href="./cadastro-cliente.html">Cadastro de Clientes</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#">Home 3</a>
+                        </li> -->
+                    </ul>
                 </li>
                 <li>
                     <a href="#">
@@ -127,7 +138,7 @@
                             <a href="#">Amortização</a>
                         </li>
                         <li>
-                            <a href="">Bancos</a>
+                            <a href="#">Catálogo de Bancos</a>
                         </li>
                     </ul>
                 </li>
@@ -179,99 +190,85 @@
                     </div>
                 </div>
             </nav>
+            <section class="simulacoes">
+                <h2>Melhores Taxas de Juros</h2>
+                <p class="descricao">Nós organizamos para você as melhores taxas de juros do mercado com base no <a href="https://www.bcb.gov.br/estatisticas/txjuros" class="link"><br>relatório do Banco Central do Brasil</a> atualizado em maio de 2022.</p>
+                <pre>Modalidades - Pessoa Jurídica:</pre>
+                <ul class="flex">
+                    <li>
+                        <div>
+                            <img src="../src/assets/images/daycoval.png">
+                            <h3> Banco Daycoval <span>1°</span></h3>
+                            <p> Financiamento imobiliário com taxas de mercado</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../src/assets/images/citibank.png">
+                            <h3> Banco Citibank <span>2°</span></h3>
+                            <p>Capital de giro com prazo até 365 dias</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../src/assets/images/banrisul.webp">
+                            <h3> Banco Banrisul <span>3°</span></h3>
+                            <p>Desconto de cheques</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../src/assets/images/bmg.webp">
+                            <h3> Banco BMG <span>4°</span></h3>
+                            <p>Conta garantida</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../src/assets/images/nordeste.png">
+                            <h3> Banco do Nordeste <span>5°</span></h3>
+                            <p>Cheque especial</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../src/assets/images/gerencianet.png">
+                            <h3> Banco GerenciaNet <span>6°</span></h3>
+                            <p>Cartão de crédito parcelado</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../src/assets/images/cetelem.jpg">
+                            <h3> Banco Celetem <span>7°</span></h3>
+                            <p>Aquisição de outros bens</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../src/assets/images/poupexjpeg.jpeg">
+                            <h3> Banco Poupex <span>8°</span></h3>
+                            <p>Financiamento imobiliário com taxas de mercado</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../src/assets/images/modal.png">
+                            <h3> Banco Modal <span>9°</span></h3>
+                            <p>Cheque especial</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../src/assets/images/Santander.png">
+                            <h3> Banco Santander <span>10°</span></h3>
+                            <p>Aquisição de veículos</p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#"><span>Mais modalidades >></span></a>
+            </section>
         </div>
-        <form id="simulações" class="simulações">
-            <label class="titulo1">Melhores Taxas de Juros</label>
-            <label class="titulo2">Nós organizamos para você as melhores taxas de juros do mercado com base no <a href="https://www.bcb.gov.br/estatisticas/txjuros" class="titulo3" >relatório do Banco Central do Brasil</a> atualizado em maio de 2022.</label>
-            <a class="MEI">Modalidades - Pessoa Jurídica:</a>    
-            <div class="cards">
-                <article class="card">
-                    <a href="#">
-                        <div class="card_content">
-                            <h3 class="card_title">Bnco Daycoval <span class="card_subtitle">1°</span></h3> 
-                            <p class="card_description">Desconto de duplicatas </p>
-                        </div>
-                    </a>
-                </article>
-                <article class="card2">
-                    <a href="#">
-                        <div class="card_content2">
-                            <h3 class="card_title2">Bnco Citibank <span class="card_subtitle2">2°</span></h3>
-                            <p class="card_description2">Capital de giro com prazo até 365 dias</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="card3">
-                    <a href="#">
-                        <div class="card_content3">
-                            <h3 class="card_title3">Bnco Banrisul  <span class="card_subtitle3">3°</span></h3>
-                            <p class="card_description3">Desconto de cheques</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="card4">
-                    <a href="#">
-                        <div class="card_content4">
-                            <h3 class="card_title4">Bnco BMG<span class="card_subtitle4">4°</span></h3>
-                            <p class="card_description4">Conta garantida </p>
-                        </div>
-                    </a>    
-                </article>
-                <article class="card5">
-                    <a href="#">
-                        <div class="card_content5">
-                            <h3 class="card_title5"> Bnco Nordeste<span class="card_subtitle5">5°</span></h3>
-                            <p class="card_description5">Cheque especial</p>
-                        </div>
-                    </a>
-                </article>
-                <a class="maismoda" href="#">Mais modalidades >></a>  
-                <a class="pessoal">Modalidades - Pessoal Física:</a>  
-            </div>
-            <div class="cards">
-                <article class="card6">
-                    <a href="#">
-                        <div class="card_content6">
-                            <h3 class="card_title6">Gerencianet <span class="card_subtitle6">1°</span></h3> 
-                            <p class="card_description6">Cartão de crédito parcelado</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="card7">
-                    <a href="#">
-                        <div class="card_content7">
-                            <h3 class="card_title7">Cetelem <span class="card_subtitle7">2°</span></h3>
-                            <p class="card_description7">Aquisição de outros bens</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="card8">
-                    <a href="#"> 
-                        <div class="card_content8">
-                            <h3 class="card_title8">Poupex  <span class="card_subtitle8">3°</span></h3>
-                            <p class="card_description8">Financiamento imobiliário com taxas de mercado</p>
-                        </div>
-                    </a>    
-                </article>
-                <article class="card9">
-                    <a href="#"> 
-                        <div class="card_content9">
-                            <h3 class="card_title9">Bnco Modal <span class="card_subtitle9">4°</span></h3>
-                            <p class="card_description9">Cheque especial</p>
-                        </div>
-                    </a>    
-                </article>
-                <article class="card10">
-                    <a href="#"> 
-                        <div class="card_content10">
-                            <h3 class="card_title10">Bnco Paccar <span class="card_subtitle10">5°</span></h3>
-                            <p class="card_description10">Aquisição de veículos</p>
-                        </div>
-                    </a>    
-                </article>
-                <a class="maismoda2" href="#">Mais modalidades >></a>   
-            </div>
-        </form>
     </div>
 
     <script src="./script.js"></script>

@@ -59,8 +59,8 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="./home-tela.html">
+                <li>
+                    <a href="../home-tela.html">
                         <i class="fas fa-home"></i>
                         <b>Home</b>
                     </a>
@@ -72,10 +72,21 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./tela-de-listagem.html">
+                    <a href="#homeSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-users"></i>
                         <b>Clientes</b>
                     </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="./tela-de-listagem.html">Lista de Clientes</a>
+                        </li>
+                        <li>
+                            <a href="./cadastro-cliente.html">Cadastro de Clientes</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#">Home 3</a>
+                        </li> -->
+                    </ul>
                 </li>
                 <li>
                     <a href="#">
@@ -113,21 +124,21 @@
                         <b>Relatórios</b>
                     </a>
                 </li>
-                <li>
+                <li class="active">
 
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-chart-line"></i>
                         <b>Simulações</b>
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
+                        <li >
                             <a href="../public/Simulação-Emprestimo.html">Empréstimos</a>
                         </li>
                         <li>
                             <a href="#">Amortização</a>
                         </li>
                         <li>
-                            <a href="../public/Simulação-Bancos.html">Bancos</a>
+                            <a href="../public/Simulação-Bancos.html">Catálogo de Bancos</a>
                         </li>
                     </ul>
                 </li>

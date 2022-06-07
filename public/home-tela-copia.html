@@ -11,9 +11,8 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="../src/assets/styles/style-tela-de-cadastro.css">
     <link rel="stylesheet" href="../src/assets/styles/style.css">
-    <link rel="stylesheet" href="../src/assets/styles/home-tela.css">
+    <link rel="stylesheet" href="../src/assets/styles/home-tela-copia.css">
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -62,7 +61,9 @@
                         <i class="fas fa-home"></i>
                         <b>Home</b>
                     </a>
+
                 </li>
+
                 <li>
                     <a href="#">
                         <i class="fas fa-wallet"></i>
@@ -70,10 +71,21 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./tela-de-listagem.html">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-users"></i>
                         <b>Clientes</b>
                     </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="./tela-de-listagem.html">Lista de Clientes</a>
+                        </li>
+                        <li>
+                            <a href="#">Cadastro de Clientes</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#">Home 3</a>
+                        </li> -->
+                    </ul>
                 </li>
                 <li>
                     <a href="#">
@@ -125,7 +137,7 @@
                             <a href="#">Amortização</a>
                         </li>
                         <li>
-                            <a href="../public/Simulação-Bancos.html">Bancos</a>
+                            <a href="../public/Simulação-Bancos.html">Catálogo de Bancos</a>
                         </li>
                     </ul>
                 </li>
@@ -177,78 +189,47 @@
                     </div>
                 </div>
             </nav>
+            <section>
+                <ul class="dados">
+                    <li class="card card1">
+                        <a href="#">
+                            <div>
+                                <h3>Banco <br> 001 <br>Banco do Brasil</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card card2">
+                        <a href="#">
+                            <div>
+                                <h3>Relatório Gráfico Anual</span></h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card card3">
+                        <a href="#">
+                            <div>
+                                <h3>Clientes </h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card card5">
+                        <a href="#">
+                            <div>
+                                <h3>Contas a Pagar</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card card4">
+                        <a href="#">
+                            <div>
+                                <h3>Contas a Receber</h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
 
-            
-            
-            <div class="container">
-              <div class="home">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="boxer">
-                      <div class="row col-12">
-                        <h4>Contas a pagar</h4>
-                      </div>                            
-                      <div class="row">
-                        <div class="col-6">
-                          <h4 class="bold">R$ 51.820,00</h4>  
-                          <h4>A pagar vencidas</h4>
-                        </div>
-                        <div class="col-6">
-                          <h4 class="bold">R$ 0,00</h4>
-                          <h4>A pagar a vencer</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="boxer">
-                      <div class="row col-12">
-                        <h4>Contas vencidas</h4>
-                      </div>
-                      <div class="row">
-                        <div class="col-6">
-                          <h4 class="bold">R$ 3.533.749,00</h4>  
-                          <h4>A pagar vencidas</h4>
-                        </div>
-                        <div class="col-6">
-                          <h4 class="bold">R$ 0,00</h4>
-                          <h4>A receber a vencer</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-4">
-                    <div class="boxer">
-                      <div class="row col-12">
-                        <h4>Relatório gráfico anual</h4>
-                      </div>
-                      <div class="row col-12">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="boxer">
-                      <div class="row col-12">
-                        <h4>Banco</h4>
-                      </div>
-                      <div class="row col-12">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="boxer">
-                      <div class="row col-12">
-                        <h4>Cliente</h4>
-                      </div>
-                      <div class="row col-12">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
         </div>
     </div>
 
@@ -269,13 +250,13 @@
     </script>
     <div id="overlay" class="overlay">
         <div class="loading">
-  
-          <div></div>
-          <div></div>
-          <div></div>
-    
+
+            <div></div>
+            <div></div>
+            <div></div>
+
         </div>
-      </div>
+    </div>
 </body>
 
 </html>
