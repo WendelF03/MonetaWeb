@@ -76,6 +76,25 @@ ul, li{
 .dados-bancarios{
     background-color: #f0f0f0;
 }
+.home {
+    max-width: 1600px;
+    margin-top: 30px;
+}
+.boxer {
+    background: #dbdbdb;
+    padding: 10px 0 70px 30px;
+    border-radius: 5px; 
+    margin-top: 20px;
+    text-align: start;
+}
+
+.boxer div[class^="col-"] {
+    padding-top: 30px;
+}
+
+.bold {
+    font-weight: bold;
+}
 
 /*scroll-bar*/
 

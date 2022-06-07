@@ -28,11 +28,12 @@ class Produto {
       let td_id = tr.insertCell();
       let td_produto = tr.insertCell();
       let td_valor = tr.insertCell();
+      let td_telefone = tr.insertCell();
       let td_acoes = tr.insertCell();
 
-      td_id.innerText = this.arrayProdutos[i].id;
-      td_produto.innerText = this.arrayProdutos[i].nomeProduto;
-      td_valor.innerText = this.arrayProdutos[i].preco;
+      // td_id.innerText = this.arrayProdutos[i].id;
+      // td_produto.innerText = this.arrayProdutos[i].nomeProduto;
+      // td_valor.innerText = this.arrayProdutos[i].preco;
 
       td_id.classList.add("center");
      
@@ -45,8 +46,8 @@ class Produto {
       imgTrash.src = "../src/assets/images/trash.png";
       imgTrash.setAttribute("onclick","produto.deletar(" + this.arrayProdutos[i].id + ")");
 
-      td_acoes.appendChild(imgEdit);
-      td_acoes.appendChild(imgTrash);
+      // td_acoes.appendChild(imgEdit);
+      // td_acoes.appendChild(imgTrash);
     }
   }
 
@@ -60,6 +61,7 @@ class Produto {
       if(this.arrayProdutos[i].id == id){
         this.arrayProdutos[i].nomeProduto = produto.nomeProduto;
         this.arrayProdutos[i].preco = produto.preco;
+        this.arrayProdutos[i].telefone = produto.telefone;
       }
     }
   }
@@ -69,6 +71,7 @@ class Produto {
 
     document.getElementById('produto').value = dados.nomeProduto;
     document.getElementById('preco').value = dados.preco;
+    document.getElementById('telefone').value = dados.telefone;
 
     document.getElementById('btn1').innerText = 'Atualizar';
   }
@@ -79,6 +82,8 @@ class Produto {
     produto.id = this.id;
     produto.nomeProduto = document.getElementById("produto").value;
     produto.preco = document.getElementById("preco").value;
+    produto.telefone = document.getElementById("telefone").value;
+    
 
     return produto;
   }
@@ -99,6 +104,7 @@ class Produto {
   cancelar() {
     document.getElementById("produto").value = "";
     document.getElementById("preco").value = "";
+    document.getElementById("telefone").value = "";
 
     document.getElementById('btn1').innerText = 'Salvar';
     this.edtId = null;

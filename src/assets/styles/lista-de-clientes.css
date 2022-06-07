@@ -1,0 +1,25 @@
+ul, li{
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.acoes{
+    display: flex;
+}
+.codigo td{
+    text-align: center;
+}
+.title th{
+    text-align: center;
+}
+::-webkit-scrollbar-track {
+    background-color: #000000;
+    width: 0.8vw;
+    opacity: 0;
+    height: 0.8vw;
+}
+
+::-webkit-scrollbar {
+    width: 0.8vw;
+}

@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="imagem/png" href="./src/assets/images/favicon.ico" />
-    <title>MonetaWeb | Home</title>
+
+    <title>MonetaWeb | Cadastro/lista de Clientes</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./src/assets/styles/style-tela-de-cadastro.css">
+    <link rel="stylesheet" href="./src/assets/styles/lista-de-clientes.css">
     <link rel="stylesheet" href="./src/assets/styles/style.css">
-    <link rel="stylesheet" href="./src/assets/styles/home-tela-copia.css">
-
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -56,31 +57,29 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#homeSubmenu">
+                <li>
+                    <a href="./index.html">
                         <i class="fas fa-home"></i>
                         <b>Home</b>
                     </a>
-
                 </li>
-
                 <li>
                     <a href="#">
                         <i class="fas fa-wallet"></i>
                         <b>Contas a Pagar/Receber</b>
                     </a>
                 </li>
-                <li>
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-users"></i>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"">
+                        <i class=" fas fa-users"></i>
                         <b>Clientes</b>
                     </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="./tela-de-listagem.html">Lista de Clientes</a>
+                            <a href="#">Lista de Clientes</a>
                         </li>
                         <li>
-                            <a href="#">Cadastro de Clientes</a>
+                            <a href="./cadastro.html">Cadastro de Clientes</a>
                         </li>
                         <!-- <li>
                             <a href="#">Home 3</a>
@@ -131,13 +130,13 @@
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="./public/Simulação-Emprestimo.html">Empréstimos</a>
+                            <a href="./simulação-emprestimo.html">Empréstimos</a>
                         </li>
                         <li>
                             <a href="#">Amortização</a>
                         </li>
                         <li>
-                            <a href="./public/Simulação-Bancos.html">Catálogo de Bancos</a>
+                            <a href="./simulação-bancos.html">Catálogo de Bancos</a>
                         </li>
                     </ul>
                 </li>
@@ -177,86 +176,105 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="./index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contas</a>
+                                <a class="nav-link" href="#">Clientes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"></a>
+                                <a class="nav-link" href="#listagem">Listagem</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <section>
-                <ul class="dados">
-                    <li class="card card1">
-                        <a href="#">
-                            <div>
-                                <h3>Banco <br> 001 <br>Banco do Brasil</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="card card2">
-                        <a href="#">
-                            <div>
-                                <h3>Relatório Gráfico Anual</span></h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="card card3">
-                        <a href="#">
-                            <div>
-                                <h3>Clientes </h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="card card5">
-                        <a href="#">
-                            <div>
-                                <h3>Contas a Pagar</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="card card4">
-                        <a href="#">
-                            <div>
-                                <h3>Contas a Receber</h3>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+            <div class="card">
 
+                <div id="listagem" class="content">
+                    <div class="title">
+                        <h2>Lista de Clientes</h2>
+                    </div>
+                    <table border="1">
+                        <thead class="title">
+                            <th class="center">Código</th>
+                            <th>Cliente</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                            <th class="center">Ações</th>
+                        </thead>
+                        <tbody id="tbody">
+                            <tr class="codigo">
+                                <td>1</td>
+                                <td>Wendel Pedro</td>
+                                <td>wendel@gmail.com</td>
+                                <td>9 9999 9999</td>
+                                <td>
+                                    <ul class="acoes">
+                                        <li>
+                                            <a href="#">
+                                                <img src="./src/assets/images/icone-editar.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./src/assets/images/icone-atualizar.png" alt=""></a>
+                                        </li>
 
+                                        <li>
+                                            <a href="#">
+                                                <img src="./src/assets/images/icone-excluir.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="codigo">
+                                <td>2</td>
+                                <td>Alice Maria</td>
+                                <td>alice@gmail.com</td>
+                                <td>9 9999 9999</td>
+                                <td>
+                                    <ul class="acoes">
+                                        <li>
+                                            <a href="#">
+                                                <img src="./src/assets/images/icone-editar.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./src/assets/images/icone-atualizar.png" alt=""></a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img src="./src/assets/images/icone-excluir.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <script src="./script.js"></script>
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
             });
-        });
-    </script>
-    <div id="overlay" class="overlay">
-        <div class="loading">
-
-            <div></div>
-            <div></div>
-            <div></div>
-
-        </div>
-    </div>
+        </script>
 </body>
 
 </html>
